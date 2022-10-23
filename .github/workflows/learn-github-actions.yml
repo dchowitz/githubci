@@ -20,4 +20,6 @@ jobs:
           bats -v
 
       - name: visualize repo
-        uses: githubocto/repo-visualizer
+        uses: githubocto/repo-visualizer@main
+        with:
+          excluded_paths: "ignore,.github,node_modules"
