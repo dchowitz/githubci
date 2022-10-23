@@ -11,4 +11,4 @@ jobs:
       - name: run deploy
         run: |
           sleep 5
-          echo '${{ environment.A_SECRET }}'
+          echo '${{ secrets.A_SECRET }}'
