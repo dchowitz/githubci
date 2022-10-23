@@ -19,7 +19,16 @@ jobs:
           npm install -g bats
           bats -v
 
-      - name: visualize repo
+      - name: visualise repo
         uses: githubocto/repo-visualizer@main
         with:
           excluded_paths: "ignore,.github,node_modules"
+          output_file: "public/diagram.svg"
+          should_push: false
+          root_path: "src/"
+
+      - name: "upload visualiser artifacts"
+        uses: actions/upload-artifact@v2
+        with:
+          name: diagram
+          path: public/diagram.svg
