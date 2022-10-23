@@ -23,7 +23,7 @@ jobs:
         uses: githubocto/repo-visualizer@main
         with:
           excluded_paths: "ignore,.github,node_modules"
-          output_file: "public/diagram.svg"
+          output_file: "docs/diagram.svg"
           should_push: false
           root_path: "src/"
 
@@ -31,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: diagram
-          path: public/diagram.svg
+          path: docs/diagram.svg
