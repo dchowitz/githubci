@@ -25,7 +25,6 @@ jobs:
           excluded_paths: "ignore,.github,node_modules"
           output_file: "docs/diagram.svg"
           should_push: true
-          root_path: "src/"
 
       - name: dump GitHub context
         id: github_context_step
