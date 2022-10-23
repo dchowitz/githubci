@@ -1,0 +1,14 @@
+name: deploy-qa
+concurrency: qa
+on:
+  - workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: QA
+    steps:
+      - name: run deploy
+        run: |
+          sleep 5
+          echo '${{ environment.A_SECRET }}'
