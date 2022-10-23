@@ -3,6 +3,12 @@ run-name: ${{ github.actor }} is learning GitHub actions
 on:
   - push
   - workflow_dispatch
+
+# This allows a subsequently queued workflow run to interrupt previous runs
+concurrency:
+  group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
 jobs:
   do-something:
     runs-on: ubuntu-latest
@@ -47,3 +53,6 @@ jobs:
 
           echo 'matrix context'
           echo '${{ toJSON(matrix) }}'
+
+      - name: sleep a bit
+        run: sleep 5
