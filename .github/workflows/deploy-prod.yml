@@ -1,0 +1,14 @@
+name: deploy-qa
+concurrency: prod
+on:
+  - workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: PROD
+    steps:
+      - name: run deploy
+        run: |
+          sleep 5
+          echo '${{ secrets.A_SECRET }}'
