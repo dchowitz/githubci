@@ -1,4 +1,4 @@
-name: deploy-qa
+name: deploy-prod
 concurrency: prod
 on:
   - workflow_dispatch
