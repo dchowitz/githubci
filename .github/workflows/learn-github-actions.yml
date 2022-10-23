@@ -24,11 +24,5 @@ jobs:
         with:
           excluded_paths: "ignore,.github,node_modules"
           output_file: "docs/diagram.svg"
-          should_push: false
+          should_push: true
           root_path: "src/"
-
-      - name: "upload visualiser artifacts"
-        uses: actions/upload-artifact@v2
-        with:
-          name: diagram
-          path: docs/diagram.svg

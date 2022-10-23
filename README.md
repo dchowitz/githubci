@@ -1,3 +1,3 @@
 # githubci
 
-![Visualization of the codebase](./diagram.svg)
+![Visualization of the codebase](./docs/diagram.svg)
